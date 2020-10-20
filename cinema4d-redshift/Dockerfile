@@ -17,10 +17,7 @@ RUN echo -e "192.168.1.104\thost.docker.internal\n" >> /etc/hosts && \
 \
     ln -s /usr/redshift/bin/redshiftCmdLine /usr/local/bin/ && \
     yum install -y http://repo.okay.com.mx/centos/7/x86_64/release/okay-release-1-1.noarch.rpm && \
-    yum install -y libopencl-devel && \
-\
-    mkdir /render
+    yum install -y libopencl-devel
 
 COPY c4d login /
-COPY balltest.c4d /render
 ENTRYPOINT ["/c4d"]

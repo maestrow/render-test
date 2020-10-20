@@ -1,4 +1,4 @@
-IMAGE=cinema4d-redshift
+IMAGE=cinema4d-redshift-demo
 
 run:
 	docker run -it --gpus=all --rm $(IMAGE) -redshift-gpu 0 -redshift-gpu 1 -render /render/balltest.c4d -oimage /render/balltest -oformat JPG
